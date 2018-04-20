@@ -21,6 +21,7 @@ class Student : public Person {
     public:
         int semester;
         string indent() {
+            return "Name: "+name+", semester: "+to_string(semester); //only C++ 11
         }
 };
 
