@@ -51,3 +51,33 @@ class Person{
         return dzieci->at(id);
     }
 };
+
+
+
+int main()
+{
+    Person p1 = Person("Ola",12,NULL);
+    Person p2 = Person("Jacek", 6, NULL);
+    Person p3 = Person("Ada", 6, NULL);
+    vector<Person> p;
+    p.push_back(p1);
+    p.push_back(p2);
+    p.push_back(p3);
+    Person p4 = Person("Matka",30,&p);
+    p4<4;
+    cout<<p4.getDziecko(0).getNazwa()<<endl;
+    cout<<p4.getDziecko(1).getNazwa()<<endl;
+    cout<<p4.getDziecko(2).getNazwa()<<endl;
+    Person p5 = Person("Arek", 6,NULL);
+    p4<<=p1; //Nie zadziaÅ‚a bo takie same
+    p4<<=p5;
+    p4<4;
+    cout<<p4.getDziecko(0).getNazwa()<<endl;
+    cout<<p4.getDziecko(1).getNazwa()<<endl;
+    cout<<p4.getDziecko(2).getNazwa()<<endl;
+    cout<<p4.getDziecko(3).getNazwa()<<endl;
+
+    cout<<p4[1].getNazwa()<<endl;
+
+    return 0;
+}
